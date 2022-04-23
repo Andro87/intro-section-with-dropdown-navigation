@@ -1,29 +1,12 @@
-@import "./variables.scss";
-.main_container {
-    background-color: var(--AlmostWhite);
-    @media screen and (min-width: $desktop) {
-        padding: 20px 0 80px;
-    }
-}
-.main_container_background {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: hsla(0, 0%, 8%, 1);
-        opacity: 0.75;
-    }
-}
+@import "../styles/variables.scss";
+
 .header {
     padding: 16px 16px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
     @media screen and (min-width: $desktop) {
         max-width: 95%;
         margin: 0 auto;
@@ -52,11 +35,15 @@
         text-decoration: none;
         color: var(--MediumGray);
         font-size: 1rem;
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
         @media screen and (min-width: $desktop) {
             font-size: 0.875rem;
         }
         &:hover {
+            /*  color: var(--AlmostBlack);*/
+            color: hsla(0, 0%, 1%, 1);
+        }
+        &:focus {
             color: var(--AlmostBlack);
         }
     }
@@ -81,16 +68,30 @@
 }
 .dropdown_container {
     position: relative;
-}
-.dropdown_btn {
-    background-color: transparent;
-    margin-left: 16px;
-    border: none;
-    @media screen and (min-width: $desktop) {
-        margin-left: 8px;
-    }
     &:hover {
         cursor: pointer;
+    }
+}
+.dropdown_btn {
+    background: transparent;
+    border: none;
+    margin-right: 16px;
+    font-family: "epilogue";
+    font-weight: 500;
+    color: var(--MediumGray);
+    font-size: 1rem;
+    transition: all 0.2s ease-in;
+    @media screen and (min-width: $desktop) {
+        margin-right: 8px;
+        font-size: 0.875rem;
+    }
+    &:hover {
+        /*  color: var(--AlmostBlack);*/
+        color: hsla(0, 0%, 1%, 1);
+        cursor: pointer;
+    }
+    &:focus {
+        color: var(--AlmostBlack);
     }
 }
 .dropdown_box {
@@ -140,9 +141,13 @@
             font-weight: 500;
             font-size: 0.875rem;
             color: var(--MediumGray);
-            transition: all 0.3s ease-in;
+            transition: all 0.2s ease-in;
             &:hover {
                 cursor: pointer;
+                /*  color: var(--AlmostBlack);*/
+                color: hsla(0, 0%, 1%, 1);
+            }
+            &:focus {
                 color: var(--AlmostBlack);
             }
         }
@@ -156,100 +161,10 @@
     border-radius: 14px;
     padding: 12px 24px;
     &:hover {
-        border: 1.5px solid var(--AlmostBlack);
+        border: 1.5px solid hsla(0, 0%, 1%, 1);
     }
 }
-.main {
-    @media screen and (min-width: $desktop) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        gap: 50px;
-        max-width: 80%;
-        margin: 70px auto 0;
-    }
-}
-.main_picture {
-    display: flex;
-    width: 100%;
-    @media screen and (min-width: $desktop) {
-        max-width: 27rem;
-    }
-    img {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-.main_intro {
-    text-align: center;
-    padding: 48px 16px 94px;
-    max-width: 36rem;
-    margin: 0 auto;
 
-    @media screen and (min-width: $desktop) {
-        text-align: initial;
-        padding: 0;
-        max-width: 34rem;
-        margin: initial;
-        align-self: flex-end;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.625rem;
-        margin-top: 16px;
-        margin-bottom: 24px;
-
-        @media screen and (min-width: $desktop) {
-            font-size: 1.125rem;
-            line-height: 1.75rem;
-            margin-top: 48px;
-            margin-bottom: 50px;
-        }
-    }
-}
-.learn_more {
-    text-decoration: none;
-    font-family: "epilogue";
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--AlmostWhite);
-    background-color: var(--AlmostBlack);
-    padding: 12px 24px;
-    border-radius: 15px;
-    border: 1px solid var(--AlmostBlack);
-    transition: all 0.5s ease-in;
-    @media screen and (min-width: $desktop) {
-        font-size: 1.125rem;
-        padding: 16px 30px;
-    }
-    &:hover {
-        color: var(--AlmostBlack);
-        background-color: transparent;
-    }
-}
-.companies_logo_container {
-    margin-top: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media screen and (min-width: $desktop) {
-        margin-top: 100px;
-        width: 100%;
-    }
-    img {
-        height: 15px;
-        @media screen and (min-width: $desktop) {
-            height: 20px;
-        }
-        &:nth-child(2) {
-            height: 26px;
-            @media screen and (min-width: $desktop) {
-                height: 36px;
-            }
-        }
-    }
-}
 @keyframes mobile {
     0% {
         transform: translateX(100%);
