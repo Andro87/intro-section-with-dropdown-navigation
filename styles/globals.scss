@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+@font-face {
+    font-family: "epilogue";
+    src: url("../public/fonts/Epilogue-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "epilogue";
+    src: url("../public/fonts/Epilogue-Medium.ttf");
+    font-weight: 500;
+}
+
+:root {
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "epilogue";
+    font-weight: 500;
+
+    color: var(--MediumGray);
+}
+h1 {
+    font-family: "epilogue";
+    font-weight: 700;
+    color: var(--AlmostBlack);
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    @media screen and (min-width: $desktop) {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
