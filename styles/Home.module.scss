@@ -89,6 +89,9 @@
     @media screen and (min-width: $desktop) {
         margin-left: 8px;
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 .dropdown_box {
     font-size: 1rem;
